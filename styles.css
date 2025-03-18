@@ -1,12 +1,14 @@
+/* Styling asas */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
-    background: #222;
+    background: #0b0f19;
     color: white;
     overflow: hidden;
 }
 
+/* Slide Container */
 .slide-container {
     width: 100vw;
     height: 100vh;
@@ -16,6 +18,7 @@ body {
     position: relative;
 }
 
+/* Slide Styling */
 .slide {
     position: absolute;
     width: 80%;
@@ -30,6 +33,7 @@ body {
     transform: scale(1);
 }
 
+/* Button Navigation */
 button {
     position: absolute;
     top: 50%;
@@ -45,18 +49,31 @@ button {
 #prev { left: 10px; }
 #next { right: 10px; }
 
-/* Satelit bergerak */
+/* Orbit Satelit */
+.orbit-container {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: rotate-orbit 10s linear infinite;
+}
+
+/* Satelit */
 .satelit {
     position: absolute;
     width: 50px;
     height: 50px;
     background: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Satellite_icon.svg') no-repeat center/contain;
-    top: 20%;
-    left: 50%;
-    animation: orbit 10s linear infinite;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
 }
 
-@keyframes orbit {
-    0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
-    100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+/* Animasi Orbit */
+@keyframes rotate-orbit {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
 }
