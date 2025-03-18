@@ -66,7 +66,7 @@ button {
     position: absolute;
     width: 50px;
     height: 50px;
-    background: url('https://www.svgrepo.com/show/285199/satellite.svg') no-repeat center/contain;
+    background: url('https://www.svgrepo.com/show/285199/satellite.sv') no-repeat center/contain;
     top: 50%;
     left: 100%;
     transform: translate(-50%, -50%);
